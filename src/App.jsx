@@ -1,18 +1,16 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import MainLayout from "./layouts/MainLayout";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 
-
 export default function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />}/>
-        <Route path="/cart" element={<Cart />}/>
+        <Route path="/" element={<MainLayout><Home/></MainLayout>} />
+        <Route path="/shop" element={<MainLayout><Shop /></MainLayout>}/>
+        <Route path="/cart" element={<MainLayout><Cart /></MainLayout>}/>
       </Routes>
     </Router>
   )
