@@ -4,6 +4,7 @@ import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 
+
 export default function App() {
   return (
     <Router>
